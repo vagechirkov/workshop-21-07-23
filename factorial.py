@@ -1,5 +1,6 @@
+from functools import reduce
+from operator import mul
+
+
 def factorial(x):
-    if x == 1:
-        return 1
-    else:
-        return x * factorial(x - 1)
+    return reduce(mul, range(1, x + 1))
